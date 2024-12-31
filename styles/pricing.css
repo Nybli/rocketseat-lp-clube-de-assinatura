@@ -1,0 +1,346 @@
+section#pricing {
+  margin-inline: auto;
+
+  & .bg-pricing {
+    background: url(../assets/images/pricing-background.png) no-repeat
+      center/cover;
+    width: 23.4rem;
+    height: 44.5rem;
+
+    & h3 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-inline: auto;
+      margin-top: 6.5rem;
+      margin-bottom: 3rem;
+    }
+
+    & .desktop-only {
+      display: none;
+    }
+
+    & .pricing-table {
+      width: 23.44rem;
+      margin-left: 3.25rem;
+      display: flex;
+      gap: 1rem;
+
+      & .mensal,
+      & .semestral,
+      & .anual {
+        background-color: var(--shape-base);
+        border: 1px solid var(--shape-stroke);
+        border-radius: 1.5rem;
+        width: 17rem;
+        height: 25rem;
+        padding: 2rem 2rem 1.75rem;
+        margin-bottom: 6.5rem;
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+
+        & header {
+          & h4 {
+            font-size: var(--fs-base);
+            font-weight: var(--fw-bold);
+            color: var(--blue-light);
+            margin-bottom: 1.5rem;
+          }
+
+          & p {
+            font-size: var(--fs-3xl);
+            font-weight: var(--fw-bold);
+            margin-bottom: 0.5rem;
+
+            & small {
+              font-size: var(--fs-base);
+            }
+          }
+
+          & span {
+            font-size: var(--fs-sm);
+            color: var(--text-label);
+          }
+        }
+
+        & ul[role="list"] {
+          width: 13.19rem;
+          list-style: none;
+          margin-top: auto;
+          display: grid;
+          gap: 0.75rem;
+          margin-bottom: 1.5rem;
+
+          & li {
+            font-size: var(--fs-xs);
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            & svg {
+              width: 0.875rem;
+              height: 0.875rem;
+            }
+
+            & svg path {
+              fill: var(--blue-base);
+            }
+          }
+        }
+      }
+
+      & .semestral {
+        position: relative;
+
+        & .tag {
+          font-size: var(--fs-2xs);
+          font-weight: var(--fw-md);
+          text-align: center;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: var(--text-body);
+          background-color: var(--shape-stroke);
+          border-radius: 999px;
+          padding: 0.56rem 1.25rem 0.56rem;
+          top: 1.56rem;
+          right: 1.56rem;
+          position: absolute;
+        }
+
+        & header {
+          & h4 {
+            color: var(--pink-light);
+          }
+        }
+
+        & ul[role="list"] {
+          margin-bottom: 24px;
+
+          & li svg path {
+            fill: var(--pink-base);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 48em) {
+  section#pricing {
+    max-width: 1440px;
+
+    & .bg-pricing {
+      width: 90rem;
+      height: 77.5rem;
+
+      & h3 {
+        font-size: 2rem;
+        padding-top: 12.13rem;
+      }
+
+      & .mobile-only {
+        display: none;
+      }
+
+      & .desktop-only {
+        display: inline-block;
+      }
+
+      & .pricing-table {
+        width: 65.63rem;
+        height: 37.88rem;
+        margin-inline: 12.19rem;
+        position: relative;
+
+        & .mensal,
+        & .semestral,
+        & .anual {
+          position: absolute;
+          width: 18rem;
+          height: 26rem;
+        }
+
+        &:has(.mensal:hover) .semestral,
+        &:has(.anual:hover) .semestral {
+          background-color: var(--shape-base);
+        }
+
+        & .card-mensal {
+          & .stars {
+            & img {
+              position: absolute;
+              transition: all 500ms ease;
+
+              &:nth-child(1) {
+                width: 1.63rem;
+                height: 1.63rem;
+                top: 4.44rem;
+                left: 20.65rem;
+              }
+
+              &:nth-child(2) {
+                width: 0.81rem;
+                height: 0.81rem;
+                top: 6.85rem;
+                left: 20.38rem;
+              }
+            }
+          }
+
+          & .mensal {
+            top: 5.63rem;
+            left: 23.81rem;
+            opacity: 0;
+
+            transition: all 500ms ease;
+          }
+        }
+
+        & .semestral {
+          top: 5.63rem;
+          left: 23.81rem;
+          background-color: var(--shape-hover);
+          z-index: 1;
+
+          transition: all 500ms ease;
+
+          & img.bunny {
+            position: absolute;
+            width: 2.81rem;
+            height: 3.13rem;
+            top: -3.14rem;
+            left: 2rem;
+          }
+        }
+
+        & .card-anual {
+          & .stars {
+            & img {
+              position: absolute;
+              transition: all 500ms ease;
+
+              &:nth-child(1) {
+                width: 1.44rem;
+                height: 1.44rem;
+                top: 32.13rem;
+                left: 42.83rem;
+              }
+
+              &:nth-child(2) {
+                width: 0.69rem;
+                height: 0.69rem;
+                top: 32.92rem;
+                left: 40.81rem;
+              }
+            }
+          }
+
+          & .anual {
+            top: 5.63rem;
+            left: 23.81rem;
+            opacity: 0;
+
+            transition: all 500ms ease;
+          }
+        }
+
+        &:hover {
+          & .card-mensal {
+            & .mensal {
+              top: 8.68rem;
+              left: 5.72rem;
+              rotate: -8deg;
+              opacity: 1;
+              
+              &:hover {
+                background-color: var(--shape-hover);
+                box-shadow: 0 0 66px rgba(53, 139, 185, 0.1);
+                transform: translateY(-8px);
+                z-index: 2;
+  
+                ~ .stars img:nth-child(1) {
+                  transform: rotate(-19.42deg);
+                }
+  
+                ~ .stars img:nth-child(2) {
+                  transform: rotate(5.69deg);
+                }
+              }
+            }
+
+            & .stars {
+              & img {
+                &:nth-child(1) {
+                  width: 1.63rem;
+                  height: 1.63rem;
+                  top: 8.37rem;
+                  left: 2.43rem;
+                  transform: rotate(-8deg);
+                }
+
+                &:nth-child(2) {
+                  width: 0.82rem;
+                  height: 0.82rem;
+                  top: 10.78rem;
+                  left: 2.15rem;
+                  transform: rotate(-8deg);
+                }
+              }
+            }
+          }
+
+          & .semestral {
+            top: 5.13rem;
+            left: 23.84rem;
+
+            &:hover {
+              transform: translateY(-8px);
+              box-shadow: 0 0 66px rgba(53, 139, 185, 0.1);
+            }
+          }
+
+          & .card-anual {
+            & .anual {
+              top: 8.68rem;
+              left: 41.90rem;
+              rotate: 8deg;
+              opacity: 1;
+
+              &:hover {
+                background-color: var(--shape-hover);
+                box-shadow: 0 0 66px rgba(53, 139, 185, 0.1);
+                transform: translateY(-8px);
+                z-index: 2;
+  
+                ~ .stars img:nth-child(1) {
+                  transform: rotate(21.34deg);
+                }
+  
+                ~ .stars img:nth-child(2) {
+                  transform: rotate(-27.95deg);
+                }
+              }
+            }
+
+            & .stars {
+              & img {
+                &:nth-child(1) {
+                  top: 35.54rem;
+                  left: 58.98rem;
+                  transform: rotate(8deg);
+                }
+
+                &:nth-child(2) {
+                  top: 36.33rem;
+                  left: 56.95rem;
+                  transform: rotate(8deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

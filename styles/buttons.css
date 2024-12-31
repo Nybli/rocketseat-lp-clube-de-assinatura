@@ -1,0 +1,51 @@
+.btn {
+  position: relative;
+  height: 2.5rem;
+  padding-inline: 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+
+  & span {
+    position: relative;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    color: var(--text-title);
+    z-index: 1;
+  }
+}
+
+& .btn-primary {
+  background-color: var(--pink-dark);
+}
+
+& .btn-secondary {
+  background-color: var(--blue-dark);
+}
+
+@media (min-width: 48em) { 
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0%);
+    z-index: 0;
+    transition: 500ms ease;
+  }
+  
+  & .btn:hover::after {
+    clip-path: circle(100%);
+  }
+  
+  & .btn-primary:hover::after {
+    background-color: var(--pink-base);
+  }
+
+  & .btn-secondary:hover::after {
+    background-color: var(--blue-mid);
+  }
+}

@@ -1,0 +1,116 @@
+footer {
+  & #bg-footer {
+    background: url(../assets/images/book-trace-background-mobile.png) no-repeat
+      center/cover;
+    padding: 6.125rem 2rem 2.375rem;
+    display: grid;
+    gap: 2.5rem;
+    height: 25.9rem;
+
+    & .brand {
+      & img {
+        height: 2.5rem;
+        margin-inline: 4.8rem;
+      }
+
+      & hr {
+        height: 1px;
+        margin-block: 0.75rem;
+        background-color: var(--shape-stroke);
+        border: none;
+      }
+
+      & .social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    & .links {
+      display: flex;
+      gap: 1.5rem;
+
+      & .content,
+      & .help {
+        width: 8.94rem;
+
+        & ul[role="list"] {
+          display: grid;
+          gap: 0.75rem;
+
+          & .title {
+            margin-bottom: 0.5rem;
+            font-size: var(--fs-base);
+            font-weight: var(--fw-bold);
+            color: var(--text-body);
+          }
+
+          & li {
+            color: var(--blue-light);
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-md);
+            margin-left: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 48em) {
+  footer {
+    width: 90rem;
+
+    & #bg-footer {
+      background: url(../assets/images/book-trace-background.png) no-repeat
+        center/cover;
+      padding-inline: 10rem;
+      padding-top: 10.63rem;
+      display: flex;
+      gap: 34rem;
+
+      & .brand {
+        width: 16.5rem;
+
+        & img {
+          height: 4.2rem;
+          margin-inline: auto;
+        }
+
+        & .social svg {
+          transition: background-color 0.5s ease;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 999px;
+          padding: 0.5rem;
+
+          &:hover {
+            background-color: var(--shape-stroke);
+
+            & path {
+              fill: var(--text-body);
+            }
+          }
+        }
+
+        & svg path {
+          fill: var(--blue-base);
+        }
+      }
+
+      & .links {
+        gap: 3.5rem;
+
+        & .content,
+        & .help {
+          & ul[role="list"] {
+            & li:hover {
+              color: var(--text-body);
+            }
+          }
+        }
+      }
+    }
+  }
+}

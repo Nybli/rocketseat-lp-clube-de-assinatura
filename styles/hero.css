@@ -1,0 +1,273 @@
+section#hero-container {
+  width: 100%;
+  text-align: center;
+
+  & .bg-hero {
+    background: url(../assets/images/hero-background.png) no-repeat center/cover;
+    height: 29rem;
+
+    & nav {
+      margin-inline: auto;
+      padding-top: 1.25rem;
+      padding-inline: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .desktop-only {
+        display: none;
+      }
+
+      & .mobile-only {
+        display: flex;
+      }
+    }
+
+    & header {
+      margin-top: 3rem;
+      margin-inline: 1.25rem;
+
+      & h1 {
+        font-size: 1.75rem;
+      }
+
+      & p {
+        margin-top: 1rem;
+        font-size: var(--fs-sm);
+        line-height: 1.4;
+        color: var(--text-body);
+      }
+    }
+  }
+
+  & .hero {
+    height: 15.69rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & img {
+      position: absolute;
+    }
+
+    & img[src*="opened-spellbook"] {
+      width: 2.5rem;
+      height: 2.5rem;
+      top: calc(50% - 20px - 77.5px);
+      left: calc(50% - 20px + 93.5px);
+      rotate: 15deg;
+    }
+
+    & img[src*="ouija-planchette"] {
+      width: 2rem;
+      height: 2rem;
+      top: calc(50% - 16px + 53px);
+      left: calc(50% - 16px - 151px);
+      rotate: -30deg;
+    }
+
+    & img[src*="crystal-ball"] {
+      width: 2.5rem;
+      height: 2.5rem;
+      top: calc(50% - 40px / 2 + 64.5px);
+      left: calc(50% - 40px / 2 + 148.5px);
+      rotate: 15deg;
+    }
+
+    & p.mobile-only {
+      font-size: var(--fs-base);
+      line-height: 1.4;
+      font-weight: var(--fw-md);
+      margin-inline: 1.25rem;
+      display: block;
+
+      & .mobile-only span {
+        color: inherit;
+      }
+    }
+
+    & p.desktop-only {
+      display: none;
+    }
+  }
+}
+
+@media (width >= 48em) {
+  section#hero-container {
+    width: 90rem;
+
+    & .bg-hero {
+      animation: fadeIn 5s forwards;
+      height: 59.25rem;
+
+      & nav {
+        padding-inline: 10rem;
+        padding-top: 3.5rem;
+
+        & .mobile-only {
+          display: none;
+        }
+
+        & .desktop-only {
+          display: flex;
+        }
+      }
+
+      & header {
+        margin-top: 10.25rem;
+        margin-inline: 24.5rem;
+
+        & h1 {
+          font-size: var(--fs-4xl);
+          line-height: auto;
+        }
+
+        & p {
+          font: var(--fs-xl);
+          line-height: 1.4;
+          width: 29rem;
+          margin-top: 2rem;
+          margin-inline: auto;
+        }
+      }
+    }
+
+    & .hero {
+      width: 75rem;
+      height: 25rem;
+      margin-top: 6rem;
+      margin-inline: auto;
+
+      & > img {
+        transition: transform 500ms ease;
+        opacity: 0;
+
+        &[src*="opened-spellbook"] {
+          width: 5rem;
+          height: 5rem;
+          top: calc(50% - 40px - 147.74px);
+          left: calc(50% - 40px - 25.84px);
+          transform: rotate(0deg);
+  
+          &:hover {
+            transform: rotate(20.76deg) scale(1.1);
+          }
+        }
+
+        &[src*="ouija-planchette"] {
+          width: 4.6rem;
+          height: 4.6rem;
+          top: calc(50% + 72.73px / 2 + 8.15px);
+          left: calc(50% - 72.73px / 2 - 525.485px);
+          transform: rotate(129.47deg);
+  
+          &:hover {
+            transform: rotate(140.04deg) scale(1.1);
+          }
+        }
+
+        &[src*="crystal-ball"] {
+          width: 4.1rem;
+          height: 4.1rem;
+          top: calc(50% + 65.45px / 2 + 16.37px);
+          left: calc(50% - 65.45px / 2 + 563.285px);
+          transform: rotate(-28.96deg);
+  
+          &:hover {
+            transform: rotate(-19.48deg) scale(1.1);
+          }
+        }
+      }
+
+      & 
+      .text-blue-1,
+      .text-blue-2,
+      .text-blue-3 {
+        font-weight: var(--fw-bold);
+      }
+
+      &:hover {
+        img[src*="opened-spellbook"] {
+          animation: fadeIn 500ms 500ms both;
+        }
+
+        img[src*="ouija-planchette"] {
+          animation: fadeIn 500ms 1s both;
+        }
+
+        img[src*="crystal-ball"] {
+          animation: fadeIn 500ms 1.5s both;
+        }
+
+        & .text-white-1 {
+          animation: change-text-color 500ms 500ms both;
+        }
+
+        & .text-blue-1 {
+          animation: change-span-color 500ms 500ms both;
+        }
+
+        & .text-white-2 {
+          animation: change-text-color 500ms 1s both;
+        }
+
+        & .text-blue-2 {
+          animation: change-span-color 500ms 1s both;
+        }
+
+        & .text-white-3 {
+          animation: change-text-color 500ms 1.5s both;
+        }
+
+        & .text-blue-3 {
+          animation: change-span-color 500ms 1.5s both;
+        }
+      }
+
+      & p.desktop-only {
+        text-align: center;
+        margin: 7.125rem 2rem 9.875rem;
+        font-size: var(--fs-2xl);
+        font-weight: var(--fw-md);
+        line-height: 2;
+        color: rgba(226, 231, 233, 0.5);
+        display: block;
+        }
+
+      & p.mobile-only {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes change-text-color {
+  0% {
+    color: rgba(226, 231, 233, 0.5);
+  }
+
+  100% {
+    color: var(--text-body);
+  }
+}
+
+@keyframes change-span-color {
+  0% {
+    color: rgba(226, 231, 233, 0.5);
+  }
+
+  100% {
+    color: var(--blue-light);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

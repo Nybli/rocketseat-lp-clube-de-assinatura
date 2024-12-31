@@ -1,0 +1,395 @@
+section#book-kit {
+  text-align: center;
+  margin-inline: auto;
+  padding-bottom: 5.5rem;
+
+  & header {
+    margin-top: 6.5rem;
+    margin-bottom: 4rem;
+
+    & .kit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+
+      & img {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      & h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    & p {
+      font-size: var(--fs-sm);
+      line-height: 1.4;
+    }
+  }
+
+  & .books {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23rem;
+    height: 20rem;
+    position: relative;
+
+    & img {
+      position: absolute;
+    }
+
+    & img[src*="book"] {
+      width: 9.8rem;
+      height: 13rem;
+      top: 3.36rem;
+      left: 5.30rem;
+    }
+
+    & img[src*="bookmark-yellow"] {
+      width: 3.65rem;
+      height: 11.31rem;
+      top: 1.82rem;
+      left: 14.06rem;
+      border-radius: 1.35px;
+      rotate: 11.72deg;
+      z-index: -1;
+    }
+
+    & img[src*="bookmark-purple"] {
+      width: 3.62rem;
+      height: 11.28rem;
+      top: 4rem;
+      left: 16.63rem;
+      border-radius: 1.35px;
+      rotate: 22.09deg;
+      z-index: -2;
+    }
+
+    & img[src*="pin"] {
+      width: 4.68rem;
+      height: 5.34rem;
+      top: 12.85rem;
+      left: 2.38rem;
+      rotate: -7.55deg;
+      z-index: -1;
+    }
+
+    & .vectors {
+      & figure:nth-child(1) {
+        & img {
+          position: absolute;
+          width: 3.67rem;
+          height: 0.63rem;
+          top: 3rem;
+          left: 2.6rem;
+        }
+
+        & figcaption {
+          position: absolute;
+          font-size: var(--fs-2xs);
+          top: 1.55rem;
+          left: 0.65rem;
+        }
+      }
+
+      & figure:nth-child(2) {
+        & img {
+          position: absolute;
+          width: 2.21rem;
+          height: 2.67rem;
+          top: 11.10rem;
+          left: 1.43rem;
+        }
+
+        & figcaption {
+          position: absolute;
+          font-size: var(--fs-2xs);
+          top: 9.65rem;
+          left: 0.5rem;
+        }
+      }
+
+      & figure:nth-child(3) {
+        & img {
+          position: absolute;
+          width: 3rem;
+          height: 3.2rem;
+          top: 15.2rem;
+          left: 16.1rem;
+        }
+
+        & figcaption {
+          position: absolute;
+          font-size: var(--fs-2xs);
+          top: 18.7rem;
+          left: 13rem;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 48em) {
+  section#book-kit {
+    max-width: 90rem;
+    padding-bottom: 17.4rem;
+
+    & header {
+      margin-top: 14.7rem;
+      margin-bottom: 5.5rem;
+
+      & .kit {
+        & img {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        & h3 {
+          font-size: 2rem;
+        }
+      }
+
+      & p {
+        font-size: var(--fs-base);
+      }
+    }
+
+    & .books {
+      margin-inline: auto;
+      width: 90rem;
+      height: 57.5rem;
+      
+      & > img {
+        transition: transform 500ms ease;
+
+        &[src*="book"] {
+          place-content: center;
+          width: 29.2rem;
+          height: 38.6rem;
+          top: 8.4rem;
+          left: 29.6rem;
+        }
+
+        &[src*="bookmark-yellow"],
+        &[src*="bookmark-purple"] {
+          width: 10.75rem;
+          height: 33.5rem;
+          top: 10.6rem;
+          left: 46rem;
+          border-radius: 0.5rem;
+          rotate: 0deg;
+        }
+
+        &[src*="pin"] {
+          width: 14rem;
+          height: 16rem;
+          top: 28.5rem;
+          left: 32.9rem;
+          rotate: 0deg;
+        }
+      }
+
+      .vectors {
+        z-index: -1;
+
+        & figure > img,
+        figcaption {
+          transition: all 500ms ease;
+        }
+
+        & figure:nth-child(1) {
+          & img {
+            width: 3.9rem;
+            height: 1.9rem;
+            top: 18.2rem;
+            left: 36.3rem;
+          }
+
+          & figcaption {
+            font-size: var(--fs-base);
+            line-height: 1.4;
+            top: 17.2rem;
+            left: 34.6rem;
+          }
+        }
+
+        & figure:nth-child(2) {
+          & img {
+            width: 2.3rem;
+            height: 2.8rem;
+            top: 26.8rem;
+            left: 35.2rem;
+          }
+
+          & figcaption {
+            font-size: var(--fs-base);
+            line-height: 1.4;
+            top: 25.8rem;
+            left: 34.9rem;
+          }
+        }
+
+        & figure:nth-child(3) {
+          & img {
+            width: 3.3rem;
+            height: 3.4rem;
+            top: 31rem;
+            left: 48.1rem;
+          }
+
+          & figcaption {
+            font-size: var(--fs-base);
+            line-height: 1.4;
+            top: 34.8rem;
+            left: 45.5rem;
+          }
+        }
+      }
+
+      &:hover {
+        & img[src*="bookmark-yellow"] {
+          transform: translate(151px, -105px) rotate(12deg);
+          animation: slideIn-bookmark-yellow 1s ease backwards;
+        }
+
+        & img[src*="bookmark-purple"] {
+          transform: translate(276px, 0px) rotate(22deg);
+          animation: slideIn-bookmark-purple 1s ease backwards;
+        }
+
+        & img[src*="pin"] {
+          transform: translate(-190px, 129px) rotate(-8deg);
+          animation: slideIn-bookmark-pin 1s ease backwards;
+        }
+
+        & figure:nth-child(1) {
+          & img {
+            transform: translate(-239.06px, -175.71px);
+            width: 175px;
+            height: 30px;
+            animation: slideIn-vector-top-left 1s ease backwards;
+          }
+
+          & figcaption {
+            transform: translate(-281.36px, -205px);
+            animation: slideIn-fig-top-left 1s ease backwards;
+          }
+        }
+
+        & figure:nth-child(2) {
+          & img {
+            transform: translate(-274.9px, 71.81px);
+            width: 105px;
+            height: 127px;
+            animation: slideIn-vector-bottom-left 1s ease backwards;
+          }
+
+          & figcaption {
+            transform: translate(-286px, 42.84px);
+            animation: slideIn-fig-bottom-left 1s ease backwards;
+          }
+        }
+
+        & figure:nth-child(3) {
+          & img {
+            transform: translate(216.3px, 202px);
+            width: 145px;
+            height: 152px;
+            animation: slideIn-vector-bottom-right 1s ease backwards;
+          }
+
+          & figcaption {
+            transform: translate(179.71px, 305.48px);
+            animation: slideIn-fig-bottom-right 1s ease backwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideIn-bookmark-yellow {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(156px, -108px) rotate(12deg);
+  }
+}
+
+@keyframes slideIn-bookmark-purple {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(286px, 0px) rotate(22deg);
+  }
+}
+
+@keyframes slideIn-bookmark-pin {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-195px, 134px) rotate(-8deg);
+  }
+}
+
+@keyframes slideIn-vector-top-left {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-244.06px, -179.71px);
+  }
+}
+
+@keyframes slideIn-fig-top-left {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-286.36px, -210px);
+  }
+}
+
+@keyframes slideIn-vector-bottom-left {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-279.9px, 76.81px);
+  }
+}
+
+@keyframes slideIn-fig-bottom-left {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-291px, 47.84px);
+  }
+}
+
+@keyframes slideIn-vector-bottom-right {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(223.3px, 202px);
+  }
+}
+
+@keyframes slideIn-fig-bottom-right {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(189.71px, 310.48px);
+  }
+}
